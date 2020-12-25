@@ -11,7 +11,7 @@ import (
 )
 
 func LoginGet(ctx *gin.Context) {
-	referer := ctx.Query("git ")
+	referer := ctx.Query("redirect_url")
 	if referer == "" {
 		ctx.String(400, "跳转地址错误")
 		return
